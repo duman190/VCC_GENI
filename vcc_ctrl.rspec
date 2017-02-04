@@ -1,0 +1,13 @@
+<rspec xmlns="http://www.geni.net/resources/rspec/3" xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" xmlns:tour="http://www.protogeni.net/resources/rspec/ext/apt-tour/1" xmlns:jacks="http://www.protogeni.net/resources/rspec/ext/jacks/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.geni.net/resources/rspec/3    http://www.geni.net/resources/rspec/3/request.xsd" type="request">
+  <node client_id="VccCtrl">
+    <emulab:vnode xmlns:rs="http://www.protogeni.net/resources/rspec/ext/emulab/1" name="pcvm1-3"/>
+    <emulab:routable_control_ip/>
+    <sliver_type name="default-vm">
+      <disk_image xmlns="http://www.geni.net/resources/rspec/3" name="urn:publicid:IDN+instageni.rnet.missouri.edu+image+ch-geni-net:VccCtrl" url="https://www.instageni.rnet.missouri.edu/image_metadata.php?uuid=8453cc40-ea5c-11e6-8523-000000000000"/>
+    </sliver_type>
+    <services>
+      <execute command="sudo apt-get update" shell="/bin/sh"/>
+    </services>
+    <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="http://www.gpolab.bbn.com/experiment-support/logos/of-ctrl.png"/>
+  </node>  
+</rspec>

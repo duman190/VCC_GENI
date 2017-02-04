@@ -1,0 +1,21 @@
+<nm-config>
+    <!--ratio between queue id and bw, i.e. queue id=1 and ratio=5 mean queue supports 5 Mbps max rate-->
+    <queue_id_bw_ratio val="10"/>
+    <!--max bw for host-to-switch links-->
+    <max_host_to_switch_bw val="100"/>
+    <!--max bw for switch-to-switch links-->
+    <max_switch_to_switch_bw val="50"/>
+    <!--idle timeout (sec) of the flow, i.e., how long flow will remain in table since last matching before be deleted-->
+    <flow_idle_timeout val="0"/>
+    <!--hard timeout (sec) of the flow, i.e., how long flow will remain in table before be deleted (last matching does not matter)-->
+    <flow_hard_timeout val="6000"/>
+    <!--Type of routing algorithm for path mapping step. Possible values: nm (default for l and l+1 VL cases),
+    nmgen (NM for l+p VL case), ed (extended version of Dijkstra for l+1 VL cases), ibf (iterative version of Bellman Ford for l+1 cases),
+    ebfs (exhaustive Breadth-First Search for l+p VL cases)-->
+    <routing_type val="nm"/>
+    <!--if true VL embedding results will be export to cvs file-->
+    <export_results val="false"/>
+    <!--if true physical graph discovery service will read main physical link properties (e.g., capacity or cost)
+    from xml config each time upon cache update-->
+    <dynamic_graph val="true"/>
+</nm-config>
